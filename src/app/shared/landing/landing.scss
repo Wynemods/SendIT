@@ -1,0 +1,454 @@
+// Color palette
+$primary: #ffb300;
+$secondary: #5b2cff;
+$bg: #f8f9fb;
+$footer-bg: #181c2a;
+$text: #222;
+$muted: #7a7a8c;
+$white: #fff;
+
+.landing-bg {
+  min-height: 100vh;
+  background: $bg;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-header {
+  background: $white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0 3.5rem;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  .logo-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-area {
+      display: flex;
+      align-items: center;
+      .logo-icon {
+        font-size: 2.5rem;
+        color: $primary;
+        margin-right: 0.7rem;
+      }
+      .logo-text {
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: $secondary;
+        letter-spacing: 0.5px;
+      }
+      .logo-sub {
+        font-size: 1.05rem;
+        color: $muted;
+        margin-left: 1rem;
+        font-weight: 500;
+      }
+    }
+    .main-nav {
+      display: flex;
+      gap: 2.8rem;
+      a {
+        color: $muted;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 1.18rem;
+        letter-spacing: 0.2px;
+        transition: color 0.2s;
+        position: relative;
+        padding-bottom: 2px;
+        &:hover, &:focus {
+          color: $secondary;
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: $secondary;
+          transition: width 0.2s;
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+        }
+        &:hover::after, &:focus::after {
+          width: 100%;
+        }
+      }
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.7rem;
+      .signin-link {
+        color: $secondary;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.15rem;
+        letter-spacing: 0.2px;
+        transition: color 0.2s;
+        &:hover { color: $primary; }
+      }
+      .get-btn {
+        background: $primary;
+        color: $white;
+        font-weight: 800;
+        border-radius: 2.2rem;
+        padding: 0.8rem 2.2rem;
+        text-decoration: none;
+        font-size: 1.15rem;
+        box-shadow: 0 4px 16px rgba(255,179,0,0.12);
+        transition: background 0.2s, box-shadow 0.2s;
+        border: none;
+        outline: none;
+        letter-spacing: 0.2px;
+        &:hover {
+          background: darken($primary, 8%);
+          box-shadow: 0 6px 24px rgba(255,179,0,0.18);
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 4.5rem 2.5rem 2.5rem 2.5rem;
+  background: linear-gradient(120deg, $primary 0%, $bg 100%);
+  min-height: 480px;
+  position: relative;
+  .hero-bg-sun {
+    position: absolute;
+    left: -120px;
+    top: -120px;
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, $primary 60%, transparent 100%);
+    opacity: 0.18;
+    z-index: 0;
+  }
+  .hero-content {
+    z-index: 1;
+    max-width: 600px;
+    .hero-badge {
+      background: $secondary;
+      color: $white;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 1.2rem;
+      padding: 0.3rem 1.1rem;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: $text;
+      margin-bottom: 1.1rem;
+      .highlight { color: $primary; }
+    }
+    p {
+      font-size: 1.18rem;
+      color: $muted;
+      margin-bottom: 2.1rem;
+      max-width: 500px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 2.1rem;
+      .send-btn, .track-btn {
+        font-size: 1.08rem;
+        font-weight: 700;
+        border-radius: 2rem;
+        padding: 0.7rem 1.7rem;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(91,44,255,0.08);
+        transition: background 0.2s;
+      }
+      .send-btn {
+        background: $primary;
+        color: $white;
+        &:hover { background: darken($primary, 10%); }
+      }
+      .track-btn {
+        background: $secondary;
+        color: $white;
+        &:hover { background: darken($secondary, 10%); }
+      }
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 1.2rem;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        strong {
+          font-size: 1.5rem;
+          color: $secondary;
+        }
+        span {
+          font-size: 1.02rem;
+          color: $muted;
+        }
+      }
+    }
+    .hero-secure {
+      display: flex;
+      gap: 1.5rem;
+      color: $muted;
+      font-size: 1.02rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .hero-visual {
+    z-index: 1;
+    margin-left: 2.5rem;
+    .live-badge {
+      background: $primary;
+      color: $white;
+      font-size: 1.02rem;
+      font-weight: 600;
+      border-radius: 1.2rem;
+      padding: 0.3rem 1.1rem;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+    .truck-card {
+      background: $white;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 24px rgba(91,44,255,0.08);
+      padding: 2.2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .truck-status {
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 1.1rem;
+        .delivered {
+          color: $secondary;
+          font-weight: 700;
+        }
+        .time {
+          color: $primary;
+          font-weight: 600;
+        }
+      }
+      .truck-illustration {
+        font-size: 3.5rem;
+        color: $primary;
+        .truck-label {
+          font-size: 1.1rem;
+          color: $secondary;
+          font-weight: 700;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.why-choose {
+  background: $white;
+  padding: 4rem 2.5rem 3.5rem 2.5rem;
+  text-align: center;
+  h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: $text;
+    margin-bottom: 0.7rem;
+  }
+  p {
+    color: $muted;
+    font-size: 1.13rem;
+    margin-bottom: 2.2rem;
+  }
+  .why-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    .why-card {
+      background: $bg;
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 12px rgba(91,44,255,0.06);
+      padding: 2.2rem 2rem 2rem 2rem;
+      flex: 1 1 0;
+      min-width: 260px;
+      max-width: 340px;
+      .why-icon {
+        font-size: 2.2rem;
+        margin-bottom: 0.7rem;
+        color: $primary;
+      }
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $secondary;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: $muted;
+        font-size: 1.05rem;
+        margin-bottom: 1.1rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          color: $text;
+          font-size: 1.01rem;
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+.cta {
+  background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+  color: $white;
+  text-align: center;
+  padding: 3.5rem 2.5rem 3.5rem 2.5rem;
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+  }
+  p {
+    font-size: 1.13rem;
+    margin-bottom: 2.2rem;
+  }
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    .cta-btn {
+      background: $white;
+      color: $secondary;
+      font-weight: 700;
+      border-radius: 2rem;
+      padding: 0.7rem 2.2rem;
+      text-decoration: none;
+      font-size: 1.08rem;
+      box-shadow: 0 2px 8px rgba(255,255,255,0.08);
+      transition: background 0.2s;
+      &:hover { background: $bg; }
+    }
+    .cta-learn {
+      color: $white;
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 1.08rem;
+      &:hover { color: $primary; }
+    }
+  }
+}
+
+.landing-footer {
+  background: $footer-bg;
+  color: $white;
+  padding: 3.5rem 2.5rem 2rem 2.5rem;
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin-bottom: 2.2rem;
+    .footer-brand {
+      flex: 1 1 0;
+      .logo-icon {
+        font-size: 2.2rem;
+        color: $primary;
+        margin-right: 0.5rem;
+      }
+      .footer-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $primary;
+      }
+      .footer-desc {
+        color: $muted;
+        font-size: 1.05rem;
+        margin-top: 0.7rem;
+      }
+    }
+    .footer-links {
+      flex: 1 1 0;
+      h4 {
+        color: $primary;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.7rem;
+      }
+      a, div {
+        color: $white;
+        font-size: 1.05rem;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.4rem;
+        &:hover { color: $primary; }
+      }
+    }
+  }
+  .footer-bottom {
+    text-align: center;
+    color: $muted;
+    font-size: 1.01rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.hero-visual.big-truck {
+  .truck-card {
+    padding: 3.5rem 4.5rem !important;
+    .truck-illustration {
+      font-size: 6rem !important;
+    }
+    .truck-label {
+      font-size: 1.5rem !important;
+      margin-left: 0.7rem;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 1100px) {
+  .landing-header { padding: 0 1.2rem; height: 80px; }
+  .logo-area .logo-text { font-size: 1.3rem; }
+  .main-nav a { font-size: 1rem; }
+  .nav-actions .get-btn { padding: 0.7rem 1.5rem; font-size: 1rem; }
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    .hero-visual { margin-left: 0; margin-top: 2.5rem; }
+  }
+  .why-choose .why-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .landing-header { padding: 0 0.5rem; height: 64px; }
+  .logo-area .logo-text { font-size: 1.1rem; }
+  .main-nav { gap: 1.2rem; }
+  .main-nav a { font-size: 0.95rem; }
+  .nav-actions .get-btn { padding: 0.5rem 1rem; font-size: 0.95rem; }
+  .hero { padding: 2.5rem 1rem 1.5rem 1rem; }
+  .why-choose { padding: 2.5rem 1rem 2rem 1rem; }
+  .cta { padding: 2rem 1rem 2rem 1rem; }
+  .landing-footer { padding: 2rem 1rem 1rem 1rem; }
+} 
