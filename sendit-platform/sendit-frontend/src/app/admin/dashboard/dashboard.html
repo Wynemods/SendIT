@@ -1,0 +1,157 @@
+<nav class="admin-navbar">
+  <div class="navbar-left">
+    <span class="logo-icon">⭐</span>
+    <span class="logo-text">SendIT <span class="admin-label">Admin</span></span>
+    <a routerLink="/admin/dashboard" class="nav-link active">Dashboard</a>
+    <a routerLink="/admin/parcels" class="nav-link">Parcels</a>
+    <a routerLink="/admin/users" class="nav-link">Users</a>
+    <a routerLink="/admin/couriers" class="nav-link">Couriers</a>
+    <a routerLink="/admin/reports" class="nav-link">Reports</a>
+    <a routerLink="/admin/settings" class="nav-link">Settings</a>
+    <input type="text" class="admin-search" placeholder="Search parcels, users, tracking..." />
+  </div>
+  <div class="navbar-right">
+    <span class="notification-bell">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7a7a8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+      <span class="notification-dot"></span>
+    </span>
+    <span class="user-avatar">AD</span>
+    <div class="user-info">
+      <span class="user-name">Admin User</span>
+      <span class="user-email">admin@email.com</span>
+      <span class="user-role">Administrator</span>
+    </div>
+  </div>
+</nav>
+<div class="admin-dashboard-container">
+  <h2>Admin Dashboard</h2>
+  <p>Monitor and manage all courier operations</p>
+  <div class="admin-dashboard-stats">
+    <div class="stat-card">
+      <div class="stat-title">Total Parcels</div>
+      <div class="stat-value">1,247</div>
+      <div class="stat-desc">+12% from last month</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Active Users</div>
+      <div class="stat-value">892</div>
+      <div class="stat-desc">+8% growth</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Pending</div>
+      <div class="stat-value">23</div>
+      <div class="stat-desc">Needs attention</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">In Transit</div>
+      <div class="stat-value">156</div>
+      <div class="stat-desc">Active deliveries</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Revenue</div>
+      <div class="stat-value">₦2.4M</div>
+      <div class="stat-desc">+15% this month</div>
+    </div>
+  </div>
+  <div class="admin-dashboard-actions">
+    <button class="btn-primary">+ Create Parcel</button>
+    <button class="btn-secondary">Export Data</button>
+  </div>
+  <div class="parcel-management card">
+    <div class="parcel-management-header">
+      <h4>Parcel Management</h4>
+      <div class="parcel-filters">
+        <button class="filter-btn active">All Parcels</button>
+        <button class="filter-btn">Pending</button>
+        <button class="filter-btn">In Transit</button>
+        <button class="filter-btn">Delivered</button>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Tracking ID</th>
+          <th>Customer</th>
+          <th>Route</th>
+          <th>Status</th>
+          <th>Courier</th>
+          <th>Amount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#SP001240 <span class="parcel-type">Electronics</span></td>
+          <td>John Doe<br /><span class="user-email">john@email.com</span></td>
+          <td>Lagos → Abuja<br /><span class="parcel-location">Victoria Island → Wuse 2</span></td>
+          <td><span class="status pending">Pending</span></td>
+          <td>Not Assigned<br /><a href="#" class="action-link">Assign Courier</a></td>
+          <td>₦3,200</td>
+          <td><button class="btn-secondary">Update Status</button></td>
+        </tr>
+        <tr>
+          <td>#SP001241 <span class="parcel-type">Documents</span></td>
+          <td>Sarah Wilson<br /><span class="user-email">sarah@email.com</span></td>
+          <td>Lagos → Port Harcourt<br /><span class="parcel-location">GRA</span></td>
+          <td><span class="status in-transit">In Transit</span></td>
+          <td>Mike Johnson<br /><span class="courier-id">Courier ID: C001</span></td>
+          <td>₦1,500</td>
+          <td><button class="btn-secondary">Track Live</button></td>
+        </tr>
+        <tr>
+          <td>#SP001242 <span class="parcel-type">Clothing</span></td>
+          <td>Mike Johnson<br /><span class="user-email">mike@email.com</span></td>
+          <td>Abuja → Kano<br /><span class="parcel-location">GRA</span></td>
+          <td><span class="status delivered">Delivered</span></td>
+          <td>Ahmed Ali<br /><span class="courier-id">Courier ID: C002</span></td>
+          <td>₦2,800</td>
+          <td><button class="btn-secondary">View Details</button></td>
+        </tr>
+        <tr>
+          <td>#SP001243 <span class="parcel-type">Clothing</span></td>
+          <td>Emma Davis<br /><span class="user-email">emma@email.com</span></td>
+          <td>Kano → Lagos<br /><span class="parcel-location">Sabon Gari → Surulere</span></td>
+          <td><span class="status pending">Pending</span></td>
+          <td>David Olator<br /><span class="courier-id">Courier ID: C003</span></td>
+          <td>₦1,800</td>
+          <td><button class="btn-secondary">Notify User</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button class="page-btn">Previous</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <span>...</span>
+      <button class="page-btn">312</button>
+      <button class="page-btn">Next</button>
+    </div>
+  </div>
+  <div class="admin-dashboard-bottom">
+    <div class="quick-actions card">
+      <button class="btn-primary">Create New Parcel</button>
+      <button class="btn-secondary">Assign Courier</button>
+      <button class="btn-tertiary">Generate Report</button>
+    </div>
+    <div class="system-status card">
+      <h4>System Status</h4>
+      <ul>
+        <li>API Status <span class="status-dot active"></span> Operational</li>
+        <li>SMS Service <span class="status-dot active"></span> Active</li>
+        <li>Email Service <span class="status-dot warning"></span> Maintenance</li>
+        <li>Payment Gateway <span class="status-dot active"></span> Operational</li>
+      </ul>
+    </div>
+    <div class="recent-activity card">
+      <h4>Recent Activity</h4>
+      <ul>
+        <li>Parcel #SP001242 delivered <span class="time">5 minutes ago</span></li>
+        <li>New user registration: Emma Davis <span class="time">17 minutes ago</span></li>
+        <li>Courier assigned to #SP001240 <span class="time">1 hour ago</span></li>
+        <li>Payment received for #SP001240 <span class="time">2 hours ago</span></li>
+        <li>System backup completed <span class="time">2 hours ago</span></li>
+      </ul>
+    </div>
+  </div>
+</div>

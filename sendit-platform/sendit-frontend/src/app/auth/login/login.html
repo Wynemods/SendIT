@@ -1,0 +1,48 @@
+<div class="login-header-global">
+  <a routerLink="/" class="logo-link top-right">
+    <span class="logo-icon">📦</span>
+    <span class="logo-text">SendIT</span>
+  </a>
+</div>
+<div class="login-container">
+  <div class="login-left">
+    <h2>Welcome Back!</h2>
+    <p>Sign in to access your courier dashboard and manage your parcels with ease.</p>
+    <ul class="features-list">
+      <li>Real-time parcel tracking</li>
+      <li>Instant delivery notifications</li>
+      <li>Secure payment processing</li>
+    </ul>
+  </div>
+  <div class="login-right">
+    <h3>Sign In</h3>
+    <p>Enter your credentials to access your account</p>
+    <form>
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email address" required />
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password" required />
+      <div class="login-options">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#" class="forgot-link">Forgot Password?</a>
+      </div>
+      <button class="btn-primary" type="submit">Sign In</button>
+      <div class="divider">or continue with</div>
+      <div class="social-login-row">
+        <button type="button" class="btn-social google" aria-label="Sign up with Google">
+          <span class="google-svg-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18"><g><path fill="#4285F4" d="M17.64 9.2045c0-.638-.0573-1.251-.1636-1.836H9v3.481h4.844c-.208 1.12-.834 2.07-1.77 2.71v2.243h2.868c1.68-1.55 2.658-3.83 2.658-6.598z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.81 5.96-2.19l-2.868-2.243c-.797.54-1.81.86-3.092.86-2.38 0-4.4-1.61-5.12-3.77H.82v2.293C2.3 16.98 5.39 18 9 18z"/><path fill="#FBBC05" d="M3.88 10.657c-.18-.54-.28-1.12-.28-1.717 0-.597.1-1.177.28-1.717V4.93H.82A8.996 8.996 0 0 0 0 9c0 1.43.34 2.79.82 4.07l3.06-2.413z"/><path fill="#EA4335" d="M9 3.579c1.32 0 2.5.454 3.43 1.346l2.572-2.572C13.47.81 11.43 0 9 0 5.39 0 2.3 1.02.82 4.93l3.06 2.293C4.6 5.19 6.62 3.579 9 3.579z"/></g></svg>
+          </span>
+          <span class="btn-social-text">Sign up with Google</span>
+        </button>
+        <button type="button" class="btn-social facebook" aria-label="Sign up with Facebook">
+          <span class="facebook-icon"></span>
+          <span class="btn-social-text">Sign up with Facebook</span>
+        </button>
+      </div>
+      <div class="signup-link">
+        Don’t have an account? <a routerLink="/auth/signup" class="form-link">Sign Up</a>
+      </div>
+    </form>
+  </div>
+</div>

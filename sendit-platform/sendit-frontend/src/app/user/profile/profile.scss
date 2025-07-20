@@ -1,0 +1,539 @@
+// THEME COLORS
+$primary: #5b2cff;
+$secondary: #1e90ff;
+$accent: #a259ff;
+$bg-light: #f7f8fa;
+$bg-dark: #181c2f;
+$text-main: #222;
+$text-muted: #7a7a8c;
+$success: #22c55e;
+$card-bg: #fff;
+$gradient: linear-gradient(120deg, $primary 0%, $secondary 100%);
+
+.profile-navbar {
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.2rem;
+  padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+  box-shadow: 0 2px 12px 0 rgba(90, 60, 255, 0.06);
+  border-radius: 0 0 1.5rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  margin-bottom: 1.2rem;
+  font-size: 0.97rem;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+.logo-icon {
+  font-size: 1.3rem;
+  margin-right: 0.3rem;
+  color: #5b2cff;
+}
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #5b2cff;
+  margin-right: 1.2rem;
+}
+.nav-link {
+  color: #7a7a8c;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.97rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 0.4rem;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link.active, .nav-link:hover {
+  background: #f7f8fa;
+  color: #5b2cff;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.notification-bell {
+  margin-right: 0.7rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.notification-dot {
+  position: absolute;
+  top: 0.1rem;
+  right: -0.2rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #ff3b3b;
+  border-radius: 50%;
+  display: inline-block;
+}
+.user-avatar {
+  background: #5b2cff;
+  color: #fff;
+  border-radius: 50%;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.user-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+}
+.user-email {
+  font-size: 0.88rem;
+  color: #7a7a8c;
+}
+
+.profile-dashboard-bg {
+  min-height: 100vh;
+  background: $bg-light url('/assets/dots-bg.svg') repeat;
+  padding: 1.2rem 0.7rem 1rem 0.7rem;
+  font-size: 0.97rem;
+}
+.profile-header-card {
+  background: $gradient;
+  color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.2rem 0.8rem 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px 0 rgba(90, 60, 255, 0.10);
+  .profile-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .profile-avatar {
+      background: #fff;
+      color: $primary;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px 0 rgba(90, 60, 255, 0.10);
+    }
+    .profile-header-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      .profile-header-name {
+        font-size: 1.05rem;
+        font-weight: 700;
+      }
+      .profile-header-email {
+        font-size: 0.95rem;
+        color: #e0e0f0;
+      }
+      .profile-header-status {
+        font-size: 0.92rem;
+        color: #b6f5c6;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .status-dot {
+          width: 0.7rem;
+          height: 0.7rem;
+          background: #22c55e;
+          border-radius: 50%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .edit-profile-btn {
+    background: #fff;
+    color: $primary;
+    font-weight: 700;
+    border-radius: 0.4rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    font-size: 0.97rem;
+    box-shadow: 0 2px 8px 0 rgba(90, 60, 255, 0.10);
+    cursor: pointer;
+    transition: background 0.2s;
+    &:hover {
+      background: $accent;
+      color: #fff;
+    }
+  }
+}
+.profile-stats-row {
+  display: flex;
+  gap: 1.1rem;
+  margin-bottom: 1.2rem;
+  .profile-stat {
+    background: $card-bg;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 8px 0 rgba(90, 60, 255, 0.06);
+    padding: 1.1rem 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .stat-label {
+      color: $text-muted;
+      font-size: 0.97rem;
+      margin-bottom: 0.2rem;
+    }
+    .stat-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: $primary;
+    }
+    .stat-desc {
+      color: $success;
+      font-size: 0.95rem;
+      margin-top: 0.1rem;
+    }
+  }
+}
+.profile-main-grid {
+  display: flex;
+  gap: 1.1rem;
+}
+.profile-main-left {
+  flex: 2.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.profile-main-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.profile-settings-card {
+  background: $card-bg;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 24px 0 rgba(90, 60, 255, 0.08);
+  padding: 1.1rem 1.2rem;
+  .settings-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: $primary;
+  }
+  .settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.7rem;
+    .setting-item {
+      background: #f4f6fb;
+      border-radius: 0.5rem;
+      padding: 0.7rem 0.7rem;
+      font-weight: 600;
+      color: $primary;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.97rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      .setting-icon {
+        font-size: 1.1rem;
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-right: 0.3rem;
+      }
+      &:hover {
+        background: $gradient;
+        color: #fff;
+      }
+    }
+  }
+}
+.profile-activity-card {
+  background: $card-bg;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 24px 0 rgba(90, 60, 255, 0.08);
+  padding: 1.1rem 1.2rem;
+  .activity-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: $primary;
+  }
+  .activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 0.4rem;
+      font-size: 0.97rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .activity-dot {
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        display: inline-block;
+        &.delivered { background: $success; }
+        &.updated { background: $secondary; }
+        &.created { background: $primary; }
+        &.payment { background: $accent; }
+      }
+      .activity-time {
+        color: $text-muted;
+        font-size: 0.92rem;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}
+.quick-actions-card {
+  background: $card-bg;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 24px 0 rgba(90, 60, 255, 0.08);
+  padding: 1.1rem 1.2rem;
+  .quick-actions-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: $primary;
+  }
+  .quick-action-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0;
+    font-size: 0.97rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: #f4f6fb;
+    color: $primary;
+    transition: background 0.2s, color 0.2s;
+    &.primary {
+      background: $gradient;
+      color: #fff;
+    }
+    &:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+}
+.account-status-card {
+  background: $card-bg;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 24px 0 rgba(90, 60, 255, 0.08);
+  padding: 1.1rem 1.2rem;
+  .account-status-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: $primary;
+  }
+  .account-status-row {
+    margin-bottom: 0.5rem;
+    font-size: 0.97rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .verified {
+    color: $success;
+    font-weight: 600;
+  }
+  .signout-btn {
+    margin-top: 1.5rem;
+    width: 100%;
+    background: #fff0f0;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    border-radius: 0.4rem;
+    padding: 0.4rem 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    &:hover {
+      background: #d32f2f;
+      color: #fff;
+    }
+  }
+}
+.stat-desc.stat-green { color: #22c55e; }
+.stat-desc.stat-blue { color: #1e90ff; }
+.stat-desc.stat-purple { color: #a259ff; }
+
+.setting-item.blue .setting-icon { background: #eaf3ff; color: #1e90ff; }
+.setting-item.green .setting-icon { background: #eafbe7; color: #22c55e; }
+.setting-item.purple .setting-icon { background: #f3eaff; color: #a259ff; }
+.setting-item.black .setting-icon { background: #f4f6fb; color: #222; }
+.setting-item.red .setting-icon { background: #ffeaea; color: #d32f2f; }
+.setting-item.indigo .setting-icon { background: #eaeaff; color: #5b2cff; }
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f4f6fb;
+  border-radius: 0.8rem;
+  padding: 1.2rem 1rem;
+  font-weight: 600;
+  color: $primary;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  .setting-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+  .setting-label {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+  .setting-desc {
+    font-size: 0.97rem;
+    color: $text-muted;
+    font-weight: 400;
+  }
+}
+.setting-item:hover {
+  background: $gradient;
+  color: #fff;
+  .setting-icon { color: #fff; }
+}
+
+.profile-settings-card .settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.3rem;
+}
+
+.profile-main-grid {
+  display: flex;
+  gap: 2.5rem;
+}
+.profile-main-left {
+  flex: 2.2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.profile-main-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+// Ensure activity, quick actions, and account status are stacked in the right column
+.profile-main-right > * {
+  margin-bottom: 1.5rem;
+}
+.profile-main-right > *:last-child {
+  margin-bottom: 0;
+}
+
+// Responsive tweaks
+@media (max-width: 1200px) {
+  .profile-main-grid {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .profile-main-right > * {
+    margin-bottom: 1.2rem;
+  }
+  .profile-header-card {
+    padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.7rem;
+  }
+}
+@media (max-width: 900px) {
+  .profile-dashboard-bg {
+    padding: 0.7rem 0.3rem;
+  }
+  .profile-main-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .profile-main-right > * {
+    margin-bottom: 1rem;
+  }
+}
+
+.avatar-img {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.2rem;
+}
+.avatar-upload {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  border: none;
+  background: none;
+}
+.edit-input {
+  display: block;
+  margin-bottom: 0.4rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.4rem;
+  border: 1px solid #e0e0e0;
+  font-size: 0.97rem;
+  width: 100%;
+  max-width: 220px;
+}
+.edit-actions {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.save-profile-btn, .cancel-profile-btn {
+  padding: 0.4rem 1.1rem;
+  border-radius: 0.4rem;
+  font-size: 0.97rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.save-profile-btn {
+  background: #5b2cff;
+  color: #fff;
+}
+.save-profile-btn:hover {
+  background: #1e90ff;
+}
+.cancel-profile-btn {
+  background: #f4f6fb;
+  color: #5b2cff;
+}
+.cancel-profile-btn:hover {
+  background: #e0e0f0;
+}

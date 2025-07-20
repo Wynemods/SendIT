@@ -1,0 +1,109 @@
+<div class="minimal-dashboard-bg">
+  <div class="minimal-dashboard-topbar">
+    <div class="topbar-left">
+      <span class="logo-icon">🟣</span>
+      <span class="logo-text">SendIT</span>
+    </div>
+    <div class="topbar-center">
+      <span class="topbar-title">Dashboard Screen</span>
+      <input type="text" class="search-bar" placeholder="Search parcels, tracking numbers..." />
+    </div>
+    <div class="topbar-right">
+      <span class="notification-icon">🔔</span>
+      <span class="user-avatar">JD</span>
+      <div class="user-info">
+        <span class="user-name">John Doe</span>
+        <span class="user-email">john.doe@email.com</span>
+        <span class="dropdown-icon">▼</span>
+      </div>
+    </div>
+  </div>
+  <main class="minimal-dashboard-main">
+    <h2>Welcome back, John!</h2>
+    <p class="subtitle">Here's what's happening with your parcels today.</p>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-title">Total Parcels</div>
+        <div class="stat-value">24</div>
+        <div class="stat-desc">+12% from last month</div>
+        <div class="stat-icon">📦</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">In Transit</div>
+        <div class="stat-value">3</div>
+        <div class="stat-desc">2 arriving today</div>
+        <div class="stat-icon">➡️</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Delivered</div>
+        <div class="stat-value">21</div>
+        <div class="stat-desc">100% success rate</div>
+        <div class="stat-icon">✅</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Total Spent</div>
+        <div class="stat-value">₦45K</div>
+        <div class="stat-desc">This month: ₦8.5K</div>
+        <div class="stat-icon">💸</div>
+      </div>
+    </div>
+    <div class="dashboard-content-row">
+      <div class="dashboard-left">
+        <div class="quick-actions card">
+          <button class="btn-track">Track Parcel</button>
+          <button class="btn-history">View History</button>
+        </div>
+        <div class="recent-activity card">
+          <h4>Recent Activity</h4>
+          <ul>
+            <li><span class="status delivered"></span>Parcel #SP001234 delivered <span class="time">2 hours ago</span></li>
+            <li><span class="status in-transit"></span>Parcel #SP001235 in transit <span class="time">4 hours ago</span></li>
+            <li><span class="status new"></span>New parcel created <span class="time">1 day ago</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dashboard-right">
+        <div class="recent-parcels card">
+          <div class="recent-parcels-header">
+            <h4>Recent Parcels</h4>
+            <a href="#">View All</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Tracking ID</th>
+                <th>Destination</th>
+                <th>Status</th>
+                <th>Amount</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#SP001234 <span class="parcel-type">Electronics</span></td>
+                <td>Lagos, Nigeria <span class="parcel-location">Victoria Island</span></td>
+                <td><span class="status delivered">Delivered</span></td>
+                <td>₦2,500</td>
+                <td><a href="#" class="action-link">View</a></td>
+              </tr>
+              <tr>
+                <td>#SP001235 <span class="parcel-type">Documents</span></td>
+                <td>Abuja, Nigeria <span class="parcel-location">Wuse 2</span></td>
+                <td><span class="status in-transit">In Transit</span></td>
+                <td>₦1,200</td>
+                <td><a href="#" class="action-link">Track</a></td>
+              </tr>
+              <tr>
+                <td>#SP001236 <span class="parcel-type">Clothing</span></td>
+                <td>Port Harcourt, Nigeria <span class="parcel-location">GRA</span></td>
+                <td><span class="status pending">Pending</span></td>
+                <td>₦3,800</td>
+                <td><a href="#" class="action-link">Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

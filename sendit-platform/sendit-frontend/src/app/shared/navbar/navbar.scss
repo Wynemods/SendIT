@@ -1,0 +1,205 @@
+$primary: #5b2cff;
+$secondary: #1e90ff;
+$bg: #fff;
+$text: #222;
+$text-muted: #7a7a8c;
+
+.navbar, .minimal-navbar {
+  z-index: 1000;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  .logo-icon {
+    font-size: 1.5rem;
+    color: $primary;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $primary;
+    margin-left: 0.2rem;
+  }
+}
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li a {
+    color: $text;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  .notification-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    background: #ff3b3b;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+    position: relative;
+    top: -2px;
+  }
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    .user-avatar {
+      background: $primary;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .user-name {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: $text;
+      }
+      .user-email {
+        font-size: 0.95rem;
+        color: $text-muted;
+      }
+    }
+    .dropdown-icon {
+      font-size: 1rem;
+      color: $text-muted;
+      margin-left: 0.2rem;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 0.5rem;
+  }
+  .nav-links {
+    gap: 1.2rem;
+  }
+}
+
+.minimal-navbar .navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  .logo-icon {
+    font-size: 1.3rem;
+    color: $primary;
+  }
+  .logo-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $primary;
+    margin-left: 0.2rem;
+  }
+}
+.minimal-navbar .nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li a {
+    color: $text;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.02rem;
+    transition: color 0.2s;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.minimal-navbar .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  .notification-bell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    svg {
+      display: block;
+    }
+    .notification-dot {
+      position: absolute;
+      top: 0px;
+      right: -2px;
+      width: 0.6rem;
+      height: 0.6rem;
+      background: #ff3b3b;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+  }
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    .user-avatar {
+      background: $primary;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .user-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $text;
+      }
+      .user-email {
+        font-size: 0.92rem;
+        color: $text-muted;
+      }
+    }
+    .dropdown-icon {
+      font-size: 1rem;
+      color: $text-muted;
+      margin-left: 0.2rem;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .minimal-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.3rem 0.5rem;
+  }
+  .minimal-navbar .nav-links {
+    gap: 1.2rem;
+  }
+}

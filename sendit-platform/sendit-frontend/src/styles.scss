@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-gradient: linear-gradient(90deg, #6a5af9 0%, #8f6af9 100%);
+  --primary-color: #6a5af9;
+  --secondary-color: #8f6af9;
+  --accent-color: #f9fafb;
+  --background-color: #f4f6fb;
+  --card-bg: #fff;
+  --text-color: #23272f;
+  --text-muted: #6b7280;
+  --success-color: #22c55e;
+  --warning-color: #facc15;
+  --danger-color: #ef4444;
+  --border-radius: 1rem;
+  --box-shadow: 0 2px 8px rgba(80, 80, 120, 0.08);
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #8f6af9 0%, #6a5af9 100%);
+}

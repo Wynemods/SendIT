@@ -1,0 +1,90 @@
+<header class="track-header-bar">
+  <div class="track-header-left">
+    <a routerLink="/user/dashboard" class="back-btn" aria-label="Back to Dashboard">
+      <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#5b2cff" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+    </a>
+    <span class="track-title">Track Parcel</span>
+  </div>
+  <form class="tracking-search-bar" aria-label="Track a parcel">
+    <input type="text" placeholder="Enter tracking number..." aria-label="Tracking Number" />
+  </form>
+  <div class="track-header-user">
+    <span class="user-avatar">JD</span>
+    <div class="user-info">
+      <span class="user-name">John Doe</span>
+      <span class="user-email">john.doe@email.com</span>
+    </div>
+  </div>
+</header>
+<div class="track-parcel-container">
+  <div class="track-parcel-summary-card">
+    <div class="summary-left">
+      <div class="tracking-number">#SP001235</div>
+      <div class="parcel-type">Electronics Package</div>
+    </div>
+    <div class="summary-center">
+      <div class="summary-route">
+        <div class="from">
+          <span>From</span>
+          <div>Nairobi, Kenya</div>
+          <div class="parcel-location">Tharaka Nithi</div>
+        </div>
+        <div class="to">
+          <span>To</span>
+          <div>Mombasa, Kenya</div>
+          <div class="parcel-location">Meru</div>
+        </div>
+      </div>
+    </div>
+    <div class="summary-right">
+      <div class="estimated-delivery">
+        <span>Estimated Delivery</span>
+        <div>Today, 4:00 PM</div>
+        <div class="time-remaining">2 hours remaining</div>
+      </div>
+      <div class="parcel-status in-transit">In Transit</div>
+    </div>
+  </div>
+  <div class="alert-area" role="alert" aria-live="polite" style="display:none;"></div>
+  <div class="track-parcel-main">
+    <div class="live-tracking card">
+      <div class="live-tracking-header">
+        <span>Live Tracking</span>
+        <span class="live-dot">● Live</span>
+      </div>
+      <div class="interactive-map">
+        <img src="/assets/kenya-map.png" alt="Map of Kenya" class="map-placeholder" />
+        <div class="current-location">Current Location: En route to Mombasa<br />Distance remaining: 45 km</div>
+      </div>
+    </div>
+    <div class="tracking-history card">
+      <h4>Tracking History</h4>
+      <ul>
+        <li><span class="status-dot active"></span>Package Picked Up <span class="history-location">Nairobi Distribution Center</span> <span class="history-time">2 hours ago</span></li>
+        <li><span class="status-dot in-transit"></span>In Transit <span class="history-location">En route to Meru</span> <span class="history-time">1 hour ago</span></li>
+        <li><span class="status-dot pending"></span>Out for Delivery <span class="history-location">Mombasa Distribution Center</span> <span class="history-time">Pending</span></li>
+        <li><span class="status-dot delivered"></span>Delivered <span class="history-location">Final destination</span> <span class="history-time">Pending</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="track-parcel-bottom">
+    <div class="parcel-details card">
+      <h4>Parcel Details</h4>
+      <div class="details-row"><span>Weight:</span> 2.5 kg</div>
+      <div class="details-row"><span>Dimensions:</span> 30 x 20 x 15 cm</div>
+      <div class="details-row"><span>Service Type:</span> Express Delivery</div>
+      <div class="details-row"><span>Total Cost:</span> KES 2,500</div>
+    </div>
+    <div class="track-actions card">
+      <h4>Actions</h4>
+      <button class="btn-primary">Contact Courier</button>
+      <button class="btn-secondary">Share Tracking Info</button>
+      <button class="btn-tertiary">Download Receipt</button>
+    </div>
+    <div class="contact-info card">
+      <h4>Contact Information</h4>
+      <div class="details-row"><span>Courier Phone:</span> +254 701 234 567</div>
+      <div class="details-row"><span>Support Email:</span> support@sendit.co.ke</div>
+    </div>
+  </div>
+</div>

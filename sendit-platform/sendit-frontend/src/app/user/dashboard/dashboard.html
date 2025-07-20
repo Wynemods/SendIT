@@ -1,0 +1,98 @@
+<header class="dashboard-header-bar">
+  <div class="dashboard-header-left">
+    <span class="logo-icon">📦</span>
+    <span class="logo-text">SendIT</span>
+    <input type="text" class="dashboard-search" placeholder="Search parcels, tracking numbers..." />
+  </div>
+  <div class="dashboard-header-user">
+    <span class="user-avatar">JD</span>
+    <div class="user-info">
+      <span class="user-name">John Doe</span>
+      <span class="user-email">john.doe@email.com</span>
+    </div>
+  </div>
+</header>
+<div class="dashboard-container">
+  <h2 class="dashboard-welcome">Welcome back, John!</h2>
+  <p class="dashboard-subtitle">Here's what's happening with your parcels today.</p>
+  <div class="dashboard-stats">
+    <div class="stat-card">
+      <div class="stat-title">Total Parcels</div>
+      <div class="stat-value">24</div>
+      <div class="stat-desc">+12% from last month</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">In Transit</div>
+      <div class="stat-value">3</div>
+      <div class="stat-desc">2 arriving today</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Delivered</div>
+      <div class="stat-value">21</div>
+      <div class="stat-desc">100% success rate</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Total Spent</div>
+      <div class="stat-value">KES 45K</div>
+      <div class="stat-desc">This month: KES 8.5K</div>
+    </div>
+  </div>
+  <div class="dashboard-main">
+    <div class="dashboard-left">
+      <div class="quick-actions card">
+        <button class="btn-primary">Track Parcel</button>
+        <button class="btn-secondary">View History</button>
+      </div>
+      <div class="recent-activity card">
+        <h4>Recent Activity</h4>
+        <ul>
+          <li><span class="status delivered"></span>Parcel #SP001234 delivered <span class="time">2 hours ago</span></li>
+          <li><span class="status in-transit"></span>Parcel #SP001235 in transit <span class="time">4 hours ago</span></li>
+          <li><span class="status new"></span>New parcel created <span class="time">1 day ago</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dashboard-right">
+      <div class="recent-parcels card">
+        <div class="recent-parcels-header">
+          <h4>Recent Parcels</h4>
+          <a href="#">View All</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Tracking ID</th>
+              <th>Destination</th>
+              <th>Status</th>
+              <th>Amount</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#SP001234 <span class="parcel-type">Electronics</span></td>
+              <td>Nairobi, Kenya <span class="parcel-location">Tharaka Nithi</span></td>
+              <td><span class="status delivered">Delivered</span></td>
+              <td>KES 2,500</td>
+              <td><a href="#" class="action-link">View</a></td>
+            </tr>
+            <tr>
+              <td>#SP001235 <span class="parcel-type">Documents</span></td>
+              <td>Mombasa, Kenya <span class="parcel-location">Meru</span></td>
+              <td><span class="status in-transit">In Transit</span></td>
+              <td>KES 1,200</td>
+              <td><a href="#" class="action-link">Track</a></td>
+            </tr>
+            <tr>
+              <td>#SP001236 <span class="parcel-type">Clothing</span></td>
+              <td>Kisumu, Kenya <span class="parcel-location">CBD</span></td>
+              <td><span class="status pending">Pending</span></td>
+              <td>KES 3,800</td>
+              <td><a href="#" class="action-link">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
