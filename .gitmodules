@@ -1,0 +1,3 @@
+[submodule "sendit-platform/sendit-frontend"]
+	path = sendit-platform/sendit-frontend
+	url = https://github.com/Wynemods/SendIT
